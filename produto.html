@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto — Seja Nutrição</title>
+  <meta name="description" content="Detalhes do produto na Seja Nutrição: descrição, opções de sabor e tamanho, disponibilidade e consulta pelo WhatsApp.">
+  <meta name="theme-color" content="#0C1B33">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Seja Nutrição">
+  <meta property="og:title" content="Produto — Seja Nutrição">
+  <meta property="og:description" content="Veja os detalhes e consulte disponibilidade e preço pelo WhatsApp.">
+  <meta property="og:image" content="img/og-image.svg">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ======================= CABEÇALHO ======================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Seja Nutrição — página inicial">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <path d="M44 22 A12 12 0 1 0 32 34 A12 12 0 1 1 20 46"
+                  stroke="#F26522" stroke-width="10" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>
+          <span class="brand__nome">SEJA</span>
+          <span class="brand__sub">NUTRIÇÃO</span>
+        </span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a class="nav-link" href="index.html">Início</a></li>
+          <li><a class="nav-link" href="produtos.html" aria-current="page">Produtos</a></li>
+          <li><a class="nav-link" href="sobre.html">Sobre a loja</a></li>
+          <li><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm header-cta" href="https://wa.me/message/U7FNIRAZKTBQB1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3.5 20.5l1.4-5A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.8 9.2c.3 2.6 3.4 5.7 6 6l1.2-1.5-1.9-1.1-1 .8c-.9-.5-1.9-1.5-2.4-2.4l.8-1L10.3 8l-1.5 1.2z" fill="currentColor" stroke="none"/></svg>
+          <span class="btn__rotulo">Fale pelo WhatsApp</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" id="btn-busca" href="produtos.html#busca" aria-label="Buscar produtos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="visually-hidden">Abrir menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero hero--compacto">
+      <div class="container">
+        <div class="hero-grid">
+          <nav class="breadcrumb" id="bc-produto" aria-label="Trilha de navegação">
+            <a href="index.html">Início</a>
+            <span aria-hidden="true">›</span>
+            <a href="produtos.html">Produtos</a>
+            <span aria-hidden="true">›</span>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produto encontrado -->
+    <section class="section" id="pagina-produto">
+      <div class="container">
+        <div class="produto-grid">
+          <div class="produto-media">
+            <span class="selo" id="produto-selo" hidden></span>
+            <div class="produto-media__img" id="produto-media"></div>
+          </div>
+
+          <div class="produto-info">
+            <span class="prod-card__cat" id="produto-categoria"></span>
+            <h1 id="produto-nome">Carregando…</h1>
+            <p class="produto-marca" id="produto-marca"></p>
+            <p id="produto-descricao"></p>
+
+            <div class="produto-preco" id="produto-preco"></div>
+
+            <div class="opcoes" id="produto-opcoes">
+              <span class="opcoes__rotulo" id="opcoes-rotulo"></span>
+              <div class="opcoes__lista" id="opcoes-lista"></div>
+            </div>
+
+            <div class="produto-acoes">
+              <a class="btn btn--primary" href="https://wa.me/message/U7FNIRAZKTBQB1" target="_blank" rel="noopener">
+                Consultar no WhatsApp
+              </a>
+              <a class="btn btn--ghost" href="produtos.html">Ver outros produtos</a>
+            </div>
+
+            <div class="bloco-info">
+              <h2>Informações do produto</h2>
+              <ul id="produto-detalhes"></ul>
+            </div>
+
+            <div class="aviso-legal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+              <p>
+                Suplemento alimentar: não substitui uma alimentação equilibrada e não se
+                destina a diagnosticar, tratar ou curar doenças. As informações vêm do
+                rótulo do fabricante — em caso de uso contínuo, gravidez, amamentação ou
+                condição de saúde, converse com um profissional antes de consumir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produto não encontrado -->
+    <section class="section" id="produto-nao-encontrado" hidden>
+      <div class="container">
+        <div class="estado-vazio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/>
+          </svg>
+          <h1 style="font-size:1.6rem">Produto não encontrado</h1>
+          <p>Esse item pode ter saído do catálogo. Veja os produtos disponíveis ou fale com a loja.</p>
+          <p>
+            <a class="btn btn--primary" href="produtos.html">Ver catálogo</a>
+            <a class="btn btn--ghost" href="https://wa.me/message/U7FNIRAZKTBQB1" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Relacionados -->
+    <section class="section section--soft" id="sec-relacionados">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Você também pode gostar</span>
+          <h2>Outros produtos da loja</h2>
+        </div>
+        <div class="grid grid-3" id="grade-relacionados"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= RODAPÉ ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none"><path d="M44 22 A12 12 0 1 0 32 34 A12 12 0 1 1 20 46" stroke="#F26522" stroke-width="10" stroke-linecap="round"/></svg>
+            </span>
+            <span class="brand__nome">SEJA</span>
+          </div>
+          <p>Suplementos, vitaminas, chás, granéis e produtos importados com atendimento de perto em Águas Lindas de Goiás.</p>
+        </div>
+
+        <nav aria-label="Links do rodapé">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre a loja</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Categorias</h2>
+          <ul>
+            <li><a href="produtos.html?categoria=proteinas">Proteínas</a></li>
+            <li><a href="produtos.html?categoria=creatina">Creatina</a></li>
+            <li><a href="produtos.html?categoria=vitaminas">Vitaminas e minerais</a></li>
+            <li><a href="produtos.html?categoria=pre-treino">Pré-treino</a></li>
+            <li><a href="produtos.html?categoria=chas-graneis">Chás e granéis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="tel:+5561995271886">(61) 99527-1886</a></li>
+            <li><a href="https://wa.me/message/U7FNIRAZKTBQB1" target="_blank" rel="noopener">WhatsApp da loja</a></li>
+            <li><a href="https://www.instagram.com/sejanutrition/" target="_blank" rel="noopener">@sejanutrition</a></li>
+            <li>Quadra 09, lote 20, Loja 01 — Camping Club, Águas Lindas de Goiás — GO</li>
+            <li>Seg a sáb, 8h às 20h · Dom, 8h às 14h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="ano">2026</span> Seja Nutrição — Seja Nutrition. Todos os direitos reservados.</span>
+        <span><a href="privacidade.html">Política de privacidade</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/message/U7FNIRAZKTBQB1" target="_blank" rel="noopener" aria-label="Falar com a Seja Nutrição no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3.5 20.5l1.4-5A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.8 9.2c.3 2.6 3.4 5.7 6 6l1.2-1.5-1.9-1.1-1 .8c-.9-.5-1.9-1.5-2.4-2.4l.8-1L10.3 8l-1.5 1.2z" fill="currentColor" stroke="none"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

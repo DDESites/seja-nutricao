@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="96" viewBox="0 0 360 96" role="img" aria-label="Seja Nutrição">
+  <g transform="translate(4 16)">
+    <path d="M44 22 A12 12 0 1 0 32 34 A12 12 0 1 1 20 46"
+          fill="none" stroke="#F26522" stroke-width="10" stroke-linecap="round"
+          transform="scale(1.1)"/>
+    <text x="76" y="52" font-family="Archivo, 'Arial Black', Arial, sans-serif"
+          font-size="46" font-weight="900" fill="#0C1B33" letter-spacing="1">SEJA</text>
+    <text x="78" y="76" font-family="Barlow, Arial, sans-serif"
+          font-size="17" font-weight="700" fill="#F26522" letter-spacing="8">NUTRIÇÃO</text>
+  </g>
+</svg>
